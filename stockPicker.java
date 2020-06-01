@@ -1,13 +1,20 @@
 import java.awt.Desktop;
 import java.net.URI;
 import java.util.Random;
+import java.util.Scanner;
 class stockPicker{
 public static void main(String args[]) throws Exception{
 Desktop d = Desktop.getDesktop();
 Random rand = new Random();
+Scanner key = new Scanner(System.in);
+System.out.print("Do you have a stock account? Yes/no type here all Caps ::");
+String outp = key.next();
 int ub = 30;
 int i = rand.nextInt(ub);
-//System.out.println(int_random);
+if((outp.charAt(0)=='Y')&&(outp.charAt(1)== 'E')){
+}
+else if((outp.charAt(0)=='N')&&(outp.charAt(1)== 'O')){
+d.browse(new URI("https://join.robinhood.com/zohraa7"));}
 if(i == 0){
 d.browse(new URI("https://in.finance.yahoo.com/quote/XOM?p=XOM&.tsrc=fin-srch"));
 System.out.println("EXXon Mobil");}
